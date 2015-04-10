@@ -1,17 +1,21 @@
-<%= @user.each do |u| %>
-<%= u.avatar %>
-<%= u.name %>
-<%= u.age %>
+<ul>
+  <li><%= image_tag @user.avatar %></li>
+  <li><%= @user.name %></li>
+  <li><%= @user.age %></li>
+  <li><%= @user.location %></li>
+</ul>
+
+<% @user.questions.each do |question| %>
+<ul>
+  <li><%= question.title %></li>
+  <li><%= question.content %></li>
+</ul>
 <%end%>
 
-
-<%= @user.each do |u| %>
-<%= u.questions %>
-<%end%>
-
-
-<%= @user.each do |u| %>
-<%= u.answers %>
+<% @user.answers.each do |answer| %>
+<ul>
+  <li><%= answer.content %></li>
+</ul>
 <%end%>
 
 
