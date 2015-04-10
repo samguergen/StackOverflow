@@ -1,13 +1,7 @@
 class UserController < ApplicationController
 # SAM WORKS FROM THIS LINE TO LINE 49
 
-def create
 
-end
-
-def new
-
-end
 
 
 
@@ -54,6 +48,21 @@ end
 
 
 #KEVIN STARTS WORKING FROM HERE DOWN
+def create
+  @user = user.create(params)
+end
+
+def new
+
+end
+
+
+
+
+
+
+
+
 
 
 
