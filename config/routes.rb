@@ -11,7 +11,11 @@ Rails.application.routes.draw do
 
 
 
+
+
+
   resources :questions
+  resources :answers
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
