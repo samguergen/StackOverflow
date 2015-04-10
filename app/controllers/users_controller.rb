@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 # SAM WORKS FROM THIS LINE TO LINE 49
 
 
@@ -54,26 +54,21 @@ def new
 end
 
 def create
-  @user = User.new(params[:user])
+  user = User.new(user_params)
 
-  if @user.save
+  if (user.save)
     flash[:notice] = "Account registered!"
-    redirect_back_or_default account_url
+    session[:user_id] = user.id
+    redirect_to root_path
   else
     render :action => :new
   end
 end
 
-
-
-
-
-
-
-
-
-
-
+private
+  def user_params
+    params.require(:user).permit(:name, :age, :location, :email, :password, :password_confirmation, :avatar)
+  end
 
 
 
