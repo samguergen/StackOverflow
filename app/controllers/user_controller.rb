@@ -5,8 +5,16 @@ class UserController < ApplicationController
     @all_users = User.all
   end
 
-
-
+  def new_login
+    @the_user = User.find_by(email: params[:email])
+    if @the_user.try(:authenticate, params[:password])
+      session[:user_id] = @the_user.id
+      redirect_to questions_path
+    else
+      flash.now[:danger] = "Invalid email/password combination"
+      redirect_to login_path
+    end
+  end
 
 
 

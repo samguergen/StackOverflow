@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
+  get '/login' => 'user#login', as: :login
 
+  post '/login' => 'user#new_login', as: :new_login
 
 
 
