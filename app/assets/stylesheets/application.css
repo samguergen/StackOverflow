@@ -13,3 +13,86 @@
  *= require_tree .
  *= require_self
  */
+#banner {
+	display: block;
+	background-color: rgba(34, 34, 34, 1);
+	width: 100%;
+	margin-top: -2.2em;
+	height: 2em;
+	margin-left: -.47em;
+}
+
+#under_head {
+	width: 100%;
+	background-color: white;
+	margin-top: 2.5em;
+	height: 5em;
+	margin-left: -.47em;
+}
+
+#logo {
+  height: 3em;
+  width: 11em;
+  margin-left: 11em;
+  display: block;
+  margin-top: -6.4em;
+}
+
+#exchange {
+	margin-left: 10em;
+	margin-top: -.5em;
+}
+
+#top {
+	display: inline-block;
+	color: #e0e0e0;
+	font-family: helvetica;
+	margin-left: 37em;
+	margin-top: 0.4em;
+}
+
+#bottom {
+	margin-left: 40em;
+
+}
+
+ul li {
+	display: inline;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+.top_header {
+	font-size: .8em;
+	margin-right: .2em;
+	padding: .4em;
+}
+
+.bottom_header {
+	background-color: grey;
+	color: white;
+	padding: .5em;
+	margin-left: .4em;
+	font-size: .85em;
+}
+
+.top_header:hover {
+	background-color: grey;
+	padding-top: .53em;
+	padding-bottom: .58em;
+}
+
+.bottom_header:hover {
+	background-color: orange;
+}
+
+#navbar-search {
+	margin-left: 21em;
+	margin-top: -1em;
+}
+
+#search_bar {
+	width: 17em;
+}
+
+
