@@ -1,46 +1,9 @@
 class UserController < ApplicationController
 # SAM WORKS FROM THIS LINE TO LINE 49
 
-def create
-
-end
-
-def new
-
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  def index
+    @all_users = User.all
+  end
 
 
 
