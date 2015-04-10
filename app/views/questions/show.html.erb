@@ -8,12 +8,17 @@
   </div>
 
   <% @question.answers.each do |answer| %>
-  <div class='answer'>
-    <%= answer.content %>
-    <div class='user'>
-      <%= image_tag answer.user.avatar, class: 'avy' %>
-      <%= link_to answer.user.name, @question.creator %>
+    <div class='answer'>
+      <%= answer.content %>
+      <div class='user'>
+        <%= image_tag answer.user.avatar, class: 'avy' %>
+        <%= link_to answer.user.name, @question.creator %>
+      </div>
     </div>
-  </div>
   <% end %>
+
+  <%= form_for Answer.new do |f| %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+  <%- end -%>
 </div>
