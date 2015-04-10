@@ -24,18 +24,18 @@ question3 = {:title => "Put", :content => "What does put do in Ruby?" , :creator
 question4 = {:title => "Functional language", :content => "What is an example of a functional language?" , :creator_id => user_4.id}
 
 question_1 = Question.create!(question1)
-question_2= = Question.create!(question2)
+question_2 = Question.create!(question2)
 question_3 = Question.create!(question3)
 question_4 = Question.create!(question4)
 
-answer1 = {:content => "You should perfect your evil laugh", question_id => question_1.id , user_id => user_4.id }
-answer1b = {:content => "You should manipulate the most influential people", question_id => question_1.id , user_id => user_2.id }
-answer2 = {:content => "Ruby is a dynamic language, Java is a static one.", question_id => question_2.id , user_id => user_1.id }
-answer2b = {:content => "Not sure.", question_id => question_2.id , user_id => user_3.id }
-answer3 = {:content => "Put is like print but with an extra line", question_id => question_3.id , user_id => user_2.id }
-answer3b = {:content => "Same as print", question_id => question_3.id , user_id => user_3.id }
-answer4 = {:content => "Javascript", question_id => question_4.id , user_id => user_3.id }
-answer4b = {:content => "Javascript, Java, Haskell, Curl", question_id => question_4.id , user_id => user_1.id }
+answer1 = {:content => "You should perfect your evil laugh", :question_id => question_1.id , :user_id => user_4.id }
+answer1b = {:content => "You should manipulate the most influential people", :question_id => question_1.id , :user_id => user_2.id }
+answer2 = {:content => "Ruby is a dynamic language, Java is a static one.", :question_id => question_2.id , :user_id => user_1.id }
+answer2b = {:content => "Not sure.", :question_id => question_2.id , :user_id => user_3.id }
+answer3 = {:content => "Put is like print but with an extra line", :question_id => question_3.id , :user_id => user_2.id }
+answer3b = {:content => "Same as print", :question_id => question_3.id , :user_id => user_3.id }
+answer4 = {:content => "Javascript", :question_id => question_4.id , :user_id => user_3.id }
+answer4b = {:content => "Javascript, Java, Haskell, Curl", :question_id => question_4.id , :user_id => user_1.id }
 
 answer_1 = Answer.create!(answer1)
 answer_1b = Answer.create!(answer1b)
