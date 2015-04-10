@@ -6,6 +6,15 @@ Rails.application.routes.draw do
    root 'welcome#index'
    post '/users/new' => 'user#create'
 
+  get '/login' => 'users#login', as: :login
+
+  post '/login' => 'users#new_login', as: :new_login
+
+
+
+
+
+  resources :questions
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

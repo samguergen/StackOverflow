@@ -1,0 +1,15 @@
+
+
+
+<%= form_tag new_login_path do %>
+<fieldset>
+  <legend>Login</legend>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%= submit_tag "Submit!" %>
+
+</fieldset>
+<% end %>
