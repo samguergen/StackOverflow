@@ -1,0 +1,4 @@
+<% form_for @user, :url => new_user_path do |f| %>
+  <% f.text_field :name %>
+  <%= f.submit 'Register'%>
+<%end%>
