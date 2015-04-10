@@ -1,0 +1,9 @@
+<%= form_tag new_login_path do |f| %>
+<fieldset>
+  <legend>Login</legend>
+    <%= f.label :email %>
+    <%= f.text_area :email %>
+    <%= f.label :password %>
+    <%= f.text_area :password %>
+</fieldset>
+<% end %>
