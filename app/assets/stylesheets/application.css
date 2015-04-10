@@ -77,9 +77,10 @@ ul li {
 }
 
 .top_header:hover {
-	background-color: grey;
+	background-color: grey !important;
 	padding-top: .53em;
 	padding-bottom: .58em;
+	text-decoration: none !important;
 }
 
 .bottom_header:hover {
