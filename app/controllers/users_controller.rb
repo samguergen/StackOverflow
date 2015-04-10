@@ -63,4 +63,54 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :age, :location, :email, :password, :password_confirmation, :avatar)
   end
+
+def show
+  @user = User.find_by(session_id[:user_id])
+end
+
+def update
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
 end
