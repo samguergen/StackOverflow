@@ -6,8 +6,8 @@ class UserController < ApplicationController
   end
 
   def new_login
-    @the_user = User.find_by(email: params[:user][:email])
-    if @the_user.try(:authenticate, params[:user][:password])
+    @the_user = User.find_by(email: params[:email])
+    if @the_user.try(:authenticate, params[:password])
       session[:user_id] = @the_user.id
       redirect_to questions_path
     else
