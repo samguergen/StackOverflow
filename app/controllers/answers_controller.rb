@@ -6,9 +6,9 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(answer_params)
-    @answer.user_id = session[:user_id]
-    @answer.save
+    answer = Answer.new(create_answer_params)
+    answer.user_id = session[:user_id]
+    answer.save
 
     redirect_to @answer.question
   end
@@ -20,7 +20,7 @@ class AnswersController < ApplicationController
   def update
      @answer = Answer.find(params[:id])
 
-     @answer.update(answer_params)
+     @answer.update(update_answer_params)
      if @answer.save
       redirect_to @answer.question
      else
@@ -42,11 +42,11 @@ class AnswersController < ApplicationController
 
 
   private
-  # def answer_params
-  #   params.require(:answer).permit(:content, :question_id)
-  # end
+  def create_answer_params
+    params.require(:answer).permit(:content, :question_id)
+  end
 
-  def answer_params
+  def update_answer_params
     params.require(:answer).permit(:question_id, :content, :user_id)
   end
 end
