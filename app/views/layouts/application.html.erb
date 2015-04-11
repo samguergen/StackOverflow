@@ -12,7 +12,7 @@
 	<div id='banner'>
 		<ul id='top'>
 			<% if session[:user_id] %>
-				<li class='top_header'> <%= link_to current_user.name, user_path %></li>
+				<li class='top_header'> <%= link_to current_user.name, user_path(current_user), :class=> 'top_link'  %></li>
 				<li class='top_header'><%= link_to 'logout', logout_users_path, :class=> 'top_link' %></a></li>
 			<% else %>
 				<li class='top_header'> <%=link_to 'sign up', new_user_path, :class=> 'top_link'%></li>
