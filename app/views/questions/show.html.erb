@@ -25,6 +25,11 @@
       <%= link_to "Edit my answer",edit_answer_path %>
       <% end %>
 
+   <% answer.comments.each do |comment| %>
+      <%= comment.content %>
+   <% end %>
+
+   <%= link_to 'Comment', new_comment_path(answer.id) %>
   <% end %>
 
   <% if session[:user_id] == @question.creator_id %>
