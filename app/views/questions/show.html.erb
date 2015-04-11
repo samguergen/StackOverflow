@@ -1,14 +1,13 @@
+<p id='ui_title'><%= @question.title %></h1>
 <div>
-  <h1><%= @question.title %></h1>
   <%= @question.content %>
 
-  <div class='user'>
     <%= image_tag @question.creator.avatar, class: 'avy' %>
     <%= link_to @question.creator.name, @question.creator %>
-  </div>
+</div>
 
   <% @question.answers.each do |answer| %>
-    <div class='answer'>
+    <div class='ind_question'>
       <%= answer.content %>
       <div class='user'>
         <%= image_tag answer.user.avatar, class: 'avy' %>

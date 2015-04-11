@@ -17,7 +17,8 @@
 			<% else %>
 				<li class='top_header'> <%=link_to 'sign up', new_user_path, :class=> 'top_link'%></li>
 				<li class='top_header'> <%= link_to 'login', login_users_path, :class=> 'top_link' %></li>
-			<% end %>
+
+			<%end%>
 			<li class='top_header'>tour</li>
 			<li class='top_header'>help</li>
 			<li class='top_header'>stack overflow careers</li>
@@ -34,7 +35,8 @@
 			<li class='bottom_header'><%= link_to 'Users', users_path, :class => 'bottom_link'%></li>
 			<li class='bottom_header'>Badges</li>
 			<li class='bottom_header'>Unanswered</li>
-			<li class='bottom_header'>Ask Question</li>
+
+			<li class='bottom_header'><%= link_to 'Ask a Question', new_question_path, :class => 'bottom_link'%></li>
 		</ul>
 	</div>
 	<%= link_to image_tag("stackoverflow_logo.jpg", :id=>'logo'), controller: 'welcome' %>
@@ -42,6 +44,5 @@
 
 
 <%= yield %>
-
 </body>
 </html>
