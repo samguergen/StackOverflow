@@ -16,10 +16,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    if @user.save!
+      redirect_to user_path(@user)
+    else
+      flash[:notice] = "A problem occurred: your profile couldn't be updated."
+      redirect_to user_path(@user)
+    end
+  end
 
-
-
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy!
+    redirect_to questions_path
+  end
 
 #KEVIN STARTS WORKING FROM HERE DOWN
 
@@ -44,9 +60,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
   end
 
-  def update
 
-  end
 
   def logout
       session[:user_id] = nil

@@ -6,7 +6,7 @@
 		<ul >
 			<% @all_users.each do |u| %>
 				<li class="user_pro">
-					<p class="user_pro_name"> <%= u.name %>
+					<p class="user_pro_name"> <%= link_to u.name, user_path(u) %>
 					<p class="user_pro_location"> <%= u.location %></p>
 					<p> <img class='ui_avatar' src='<%= u.avatar %>'/> </p>
 				</li>

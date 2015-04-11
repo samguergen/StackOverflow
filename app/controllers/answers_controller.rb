@@ -6,9 +6,9 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(answer_params)
-    @answer.user_id = session[:user_id]
-    @answer.save
+    answer = Answer.new(create_answer_params)
+    answer.user_id = session[:user_id]
+    answer.save
 
     redirect_to @answer.question
   end
@@ -20,7 +20,7 @@ class AnswersController < ApplicationController
   def update
      @answer = Answer.find(params[:id])
 
-     @answer.update(answer_params)
+     @answer.update(update_answer_params)
      if @answer.save
       redirect_to @answer.question
      else
@@ -28,13 +28,25 @@ class AnswersController < ApplicationController
      end
   end
 
+  def destroy
+    @answer = Answer.find(params[:id])
+    @question = @answer.question_id
+    if session[:user_id] == @answer.user_id || session[:user_id] == @answer.question.creator_id
+      @answer.destroy!
+      redirect_to question_path(@question)
+    else
+      flash[:notice] = "You are not permitted to delete this answer."
+      redirect_to question_path(@question)
+    end
+  end
+
 
   private
-  # def answer_params
-  #   params.require(:answer).permit(:content, :question_id)
-  # end
+  def create_answer_params
+    params.require(:answer).permit(:content, :question_id)
+  end
 
-  def answer_params
+  def update_answer_params
     params.require(:answer).permit(:question_id, :content, :user_id)
   end
 end
