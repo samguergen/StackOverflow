@@ -12,7 +12,7 @@
 	<div id='banner'>
 		<ul id='top'>
 			<% if session[:user_id] %>
-				<li class='top_header'> <%= link_to current_user.name, user_path %></li>
+				<li class='top_header'> <%= link_to current_user.name, user_path(current_user), :class=> 'top_link'  %></li>
 				<li class='top_header'><%= link_to 'logout', logout_users_path, :class=> 'top_link' %></a></li>
 			<% else %>
 				<li class='top_header'> <%=link_to 'sign up', new_user_path, :class=> 'top_link'%></li>
@@ -34,7 +34,7 @@
 			<li class='bottom_header'><%= link_to 'Users', users_path, :class => 'bottom_link'%></li>
 			<li class='bottom_header'>Badges</li>
 			<li class='bottom_header'>Unanswered</li>
-			<li class='bottom_header'><a href="/questions/new">Ask a Question</a></li>
+			<li class='bottom_header'><%= link_to 'Ask a Question', new_question_path, :class => 'bottom_link'%></li>
 		</ul>
 	</div>
 	<%= link_to image_tag("stackoverflow_logo.jpg", :id=>'logo'), controller: 'welcome' %>
