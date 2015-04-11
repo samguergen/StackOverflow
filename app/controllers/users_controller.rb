@@ -54,6 +54,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy!
+    redirect_to questions_path
   end
 
 
