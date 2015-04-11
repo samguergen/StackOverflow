@@ -153,6 +153,55 @@ div div p:nth-child(4) {
 
 /* question show */
 
+.avy {
+	width: 2em;
+	height: 2em;
+}
+
+#qs_title {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	margin-left: .7em;
+	font-size: 1.5em;
+}
+
+.user_section {
+	padding: 12px 0 10px 0;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+	margin-left: 1.2em;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+#qu_name {
+	color: #0c65a5;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-decoration: none !important;
+	font-size: .7em;
+}
+
+#qu_box {
+	margin-left: 33em;
+}
+
+.ind_question {
+	padding: 12px 0 10px 0;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+	margin-left: 1.2em;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: .9em;
+}
+
+.user {
+	margin-left: 37em;
+}
+
+#answer_submit {
+	margin-top: 2em;
+	margin-left: 1em;
+}
+
+
 /* User Index */
 
 #ui_title {

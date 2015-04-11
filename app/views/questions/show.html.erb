@@ -1,17 +1,19 @@
-<p id='ui_title'><%= @question.title %></h1>
-<div>
+<p id='qs_title'><%= @question.title %></h1>
+
+<div class='user_section'>
   <%= @question.content %>
 
+  <div id='qu_box' >  
     <%= image_tag @question.creator.avatar, class: 'avy' %>
-    <%= link_to @question.creator.name, @question.creator %>
+    <%= link_to @question.creator.name, @question.creator, :id => 'qu_name' %>
+  </div>
 </div>
-
   <% @question.answers.each do |answer| %>
     <div class='ind_question'>
       <%= answer.content %>
       <div class='user'>
         <%= image_tag answer.user.avatar, class: 'avy' %>
-        <%= link_to answer.user.name, @question.creator %>
+        <%= link_to answer.user.name, @question.creator, :id => 'qu_name' %>
       </div>
     </div>
 
@@ -26,9 +28,11 @@
   <%= link_to "Delete my question", @question, method: :delete, data: {confirm: "Are you sure?"} %>
   <% end %>
 
+  <div id='answer_submit'>
   <%= form_for Answer.new do |f| %>
     <%= f.text_area :content %>
     <%= f.hidden_field :question_id, value: @question.id %>
     <%= f.submit %>
   <%- end -%>
+  </div>
 </div>
