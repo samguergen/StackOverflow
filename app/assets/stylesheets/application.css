@@ -111,10 +111,44 @@ ul li {
 
 /*Questions Index*/
   
- .ind_ques { 
+#all_questions {
+	margin-top: 3em;
+}
+
+.ind_ques { 
   padding: 12px 0 10px 0;
   border-bottom: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
+}
+
+.ind_ques_contents {
+	margin-left: 6em;
+}
+
+.ui_avatar_question {
+	width: 2.7em;
+	height: 2.7em;
+	margin: 0 auto;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+	margin-top: 1em;
+}
+
+div div p {
+	color: #0c65a5;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+div div p:nth-child(2) {
+	font-size: .7em;
+	color: #444;
+}
+
+div div p:nth-child(4) {
+	font-size: .7em;
+	position: absolute;
+	margin-left: 4.5em;
+	margin-top: -5.5em;
+	mar
 }
 
 /* User Index */
@@ -159,3 +193,62 @@ ul li {
 	margin-top: 2.4em;
 	position: absolute;
 }
+
+#register_title {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	margin-left: .2em;
+}
+
+form input[type='text'] {
+   margin-top: 1em;
+   width: 23em;
+   height: 2em;
+   border-color: black;
+   border-width: 1px;
+}
+
+form input[type='password'] {
+   margin-top: 1em;
+   width: 23em;
+   height: 2em;
+   border-color: black;
+   border-width: 1px;
+}
+
+form input[type='url'] {
+	margin-top: 1em;
+	width: 23em;
+	height: 2em;
+	border-color: black;
+	border-width: 1px;
+}
+
+form input[type='submit'] {
+	margin-top: 1.5em;
+	position: absolute;
+	color: #fff;
+	background-color: #009afd;
+	border: 1px solid #1777b7;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset,0 1px 1px rgba(100,100,100,0.3);
+	padding: 8px 10px 7px 10px;
+	border-radius: 3px;
+	text-decoration: none;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+fieldset {
+	width: 20%;
+	padding-bottom: 4em;
+	background: #f9f9f9;
+	border: 1px solid #d4d4d4;
+	box-shadow: -1px 1px #f2f2f2;
+	color: #888;
+	margin-bottom: 15px;
+	margin-top: 2em;
+}
+
+legend {
+	color: black;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
