@@ -19,6 +19,7 @@
 
   <%= form_for Answer.new do |f| %>
     <%= f.text_area :content %>
+    <%= f.hidden_field :question_id, value: @question.id %>
     <%= f.submit %>
   <%- end -%>
 </div>
