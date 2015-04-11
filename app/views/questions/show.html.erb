@@ -1,6 +1,10 @@
 <div>
   <h1><%= @question.title %></h1>
   <%= @question.content %>
+  <% @question.comments.each do |comment| %>
+    <%= comment.content %>
+  <% end %>
+  <%= link_to 'Comment', new_comment_path(@question.id) %>
 
   <div class='user'>
     <%= image_tag @question.creator.avatar, class: 'avy' %>
