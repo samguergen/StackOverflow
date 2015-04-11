@@ -10,9 +10,10 @@
 <div class="user_show">
 	<% @user.questions.each do |question| %>
 	<ul>
-	  <li><%= question.title %></li>
+	  <li><%= link_to "#{question.title}", question_path(question.id) %></li>
 	  <li><%= question.content %></li>
 	</ul>
+
 	<%end%>
 </div>
 
@@ -20,7 +21,7 @@
 <div class="user_show">
 	<% @user.answers.each do |answer| %>
 	<ul>
-	  <li><%= answer.content %></li>
+	  <li><%= link_to "#{answer.content}", question_path(answer.question_id) %></li>
 	</ul>
 	<%end%>
 </div>
