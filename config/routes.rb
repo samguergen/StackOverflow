@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-
+  resources :comments
   resources :answers
   resources :questions
   # The priority is based upon order of creation: first created -> highest priority.
