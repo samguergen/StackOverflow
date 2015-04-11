@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
   end
 
   def edit
-    @answer = Article.find(params[:id])
+    @answer = Answer.find(params[:id])
   end
 
   def update

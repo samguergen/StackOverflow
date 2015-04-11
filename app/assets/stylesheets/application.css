@@ -35,16 +35,21 @@
 	color: #e0e0e0 !important;
 }
 
+.bottom_link {
+	text-decoration: none !important;
+	color: white !important;
+}
+
 #logo {
   height: 3em;
   width: 12em;
-  margin-left: 11em;
+  margin-left: .5em;
   display: block;
   margin-top: -6.4em;
 }
 
 #exchange {
-	margin-left: 10em;
+	/*margin-left: 1em;*/
 	margin-top: -.5em;
 }
 
@@ -52,13 +57,14 @@
 	display: inline-block;
 	color: #e0e0e0;
 	font-family: helvetica;
-	margin-left: 37em;
+	margin-left: 44em;
 	margin-top: 0.4em;
 }
 
 #bottom {
-	margin-left: 40em;
-
+	float: right;
+	margin-right: .7em;
+	margin-top: -.1em;
 }
 
 ul li {
@@ -95,6 +101,8 @@ ul li {
 #navbar-search {
 	margin-left: 21em;
 	margin-top: -1em;
+	float: right;
+	margin-right: 1em;
 }
 
 #search_bar {
@@ -109,3 +117,45 @@ ul li {
   border-top: 1px solid #e0e0e0;
 }
 
+/* User Index */
+
+#ui_title {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	margin-left: .7em;
+}
+
+#user_index {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	padding: 15px;
+	border: 0;
+	border-top: 1px solid #e0e0e0;
+	box-sizing: content-box;
+}
+
+.ui_avatar {
+	width: 3.3em;
+	height: 3.3em;
+	margin: 0 auto;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.user_pro {
+	display: inline-block;
+	margin-right: 15em;
+}
+
+.user_pro_name {
+	color: #0c65a5;
+	font-size: .8em;
+	margin-left: 4.5em;
+	margin-top: 1.2em;
+	position: absolute;
+}
+
+.user_pro_location {
+	color: #888;
+	font-size: .8em;
+	margin-left: 4.5em;
+	margin-top: 2.4em;
+	position: absolute;
+}
