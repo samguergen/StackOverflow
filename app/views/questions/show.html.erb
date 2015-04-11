@@ -16,6 +16,10 @@
       </div>
     </div>
 
+   <% if session[:user_id] == answer.user_id || session[:user_id] == answer.question.creator_id %>
+      <%= link_to "Delete my answer", answer, method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
+
   <% end %>
 
   <% if session[:user_id] == @question.creator_id %>
