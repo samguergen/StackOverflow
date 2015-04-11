@@ -11,14 +11,12 @@
 	<img id='exchange' src="/assets/stack_exchange.png">
 	<div id='banner'>
 		<ul id='top'>
-			<%if false%>
 			<% if session[:user_id] %>
 				<li class='top_header'> <%= link_to current_user.name, user_path %></li>
 				<li class='top_header'><%= link_to 'logout', logout_users_path, :class=> 'top_link' %></a></li>
 			<% else %>
 				<li class='top_header'> <%=link_to 'sign up', new_user_path, :class=> 'top_link'%></li>
 				<li class='top_header'> <%= link_to 'login', login_users_path, :class=> 'top_link' %></li>
-			<% end %>
 			<%end%>
 			<li class='top_header'>tour</li>
 			<li class='top_header'>help</li>
@@ -44,6 +42,5 @@
 
 
 <%= yield %>
-
 </body>
 </html>
