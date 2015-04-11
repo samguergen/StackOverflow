@@ -252,3 +252,36 @@ legend {
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
+/* user show */
+.user_show {
+	padding: 12px 0 10px 0;
+	border-top: 1px solid #e0e0e0;
+	margin-top: 2em;
+	margin-left: -2em;
+
+}
+
+#us_avatar {
+	width: 8.3em;
+	height: 8.3em;
+}
+
+#us_name {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	margin-left: .7em;
+	margin-top: 2em;
+}
+
+.user_info {
+	margin-left: 3em;
+	display: inherit;
+	margin-left: 10em;
+}
+
+.us_title {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color: #0c65a5;
+	margin-left: .5em;
+	position: absolute;
+	margin-top: .3em;
+}
