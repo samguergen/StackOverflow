@@ -1,0 +1,8 @@
+<%= form_for(@answer) url: {action: "edit"} do |f| %>
+  
+
+  <%= f.label :content %>
+  <%= f.text_field :content  %>
+
+  <%= f.submit %>
+<% end %>
