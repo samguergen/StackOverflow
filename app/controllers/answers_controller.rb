@@ -28,6 +28,18 @@ class AnswersController < ApplicationController
      end
   end
 
+  def destroy
+    @answer = Answer.find(params[:id])
+    @question = @answer.question_id
+    if session[:user_id] == @answer.user_id || session[:user_id] == @answer.question.creator_id
+      @answer.destroy!
+      redirect_to question_path(@question)
+    else
+      flash[:notice] = "You are not permitted to delete this answer."
+      redirect_to question_path(@question)
+    end
+  end
+
 
   private
   # def answer_params
