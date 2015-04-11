@@ -202,7 +202,7 @@ div div p:nth-child(4) {
 }
 
 
-/* User Index */
+/* User Index/log/signin */
 
 #ui_title {
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -299,9 +299,37 @@ fieldset {
 }
 
 legend {
-	color: black;
-	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color: black !important;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
+	text-decoration: none !important;
+	border-top-style: solid;
+	border-top-color: orange;
+	border-top-width: 2px;
 }
+
+
+span {
+	margin-left: 10em;
+	position: absolute;
+	color: black;
+
+}
+
+span:hover {
+	margin-left: 10em;
+	position: absolute;
+	color: black;
+	border-top-style: solid;
+	border-top-color: orange;
+	border-top-width: 2px;
+}
+
+.sign_link {
+	color: black !important;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
+	text-decoration: none !important;
+}
+
 
 /* user show */
 .user_show {
