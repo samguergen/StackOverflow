@@ -28,11 +28,13 @@
   <%= link_to "Delete my question", @question, method: :delete, data: {confirm: "Are you sure?"} %>
   <% end %>
 
+  <% if session[:user_id] %>
   <div id='answer_submit'>
   <%= form_for Answer.new do |f| %>
     <%= f.text_area :content %>
     <%= f.hidden_field :question_id, value: @question.id %>
     <%= f.submit %>
   <%- end -%>
+  <% end %>
   </div>
 </div>
