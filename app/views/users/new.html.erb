@@ -1,7 +1,7 @@
 
 <%= form_for User.new do |f| %>
   <fieldset>
-    <legend>Sign Up</legend>
+    <legend><span> <%= link_to 'Log in', login_users_path, :class=> 'sign_link' %></span><%=link_to 'Sign up', new_user_path, :class=> 'sign_link'%></legend>
     <%= f.text_field :name, :placeholder => "Name (your public display name" %>
     
     <%= f.text_field :email, :placeholder => "Email (required, but never shown)" %>

@@ -2,7 +2,8 @@
 
 <%= form_tag new_login_users_path do %>
 <fieldset>
-  <legend>Log in</legend>
+  <legend><span> <%=link_to 'Sign up', new_user_path, :class=> 'sign_link'%></span> <%= link_to 'Log in', login_users_path, :class=> 'sign_link' %></legend>
+
     <%= label_tag :email %>
     <%= text_field_tag :email %>
     <%= label_tag :password %>
