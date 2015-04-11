@@ -11,37 +11,35 @@
 	<img id='exchange' src="/assets/stack_exchange.png">
 	<div id='banner'>
 		<ul id='top'>
-			<% if false %>
+			<%if false%>
 			<% if session[:user_id] %>
-				<% if false %>
-				<li><a id="home" href='/users/home/<%=session[:user_id]%>'>home | </a></li>
-				<% end %>
-				<li class='top_header'><%= link_to 'logout', logout_path %></a></li>
+				<li class='top_header'> <%= link_to current_user.name, user_path %></li>
+				<li class='top_header'><%= link_to 'logout', logout_users_path, :class=> 'top_link' %></a></li>
 			<% else %>
+				<li class='top_header'> <%=link_to 'sign up', new_user_path, :class=> 'top_link'%></li>
+				<li class='top_header'> <%= link_to 'login', login_users_path, :class=> 'top_link' %></li>
 			<% end %>
-				<li class='top_header'> <%= link_to 'sign up', signup_path %></li>
-				<li class='top_header'> <%= link_to 'login', login_path %></li>
-			<% end %>
+			<%end%>
 			<li class='top_header'>tour</li>
 			<li class='top_header'>help</li>
 			<li class='top_header'>stack overflow careers</li>
 			<form id="navbar-search" action="/search" method="GET">
-	            <input id="search_bar" type="text" class="search-query span4" placeholder="Search" name="search">
+	            <input id="search_bar"  class="search-query span4" placeholder="Search" name="search">
 		    </form>
 		</ul>
 	</div>
 
 	<div id='under_head'>
 		<ul id='bottom'>
-			<li class='bottom_header'>Questions</li>
+			<li class='bottom_header'><%= link_to 'Questions', questions_path, :class => 'bottom_link'%></li>
 			<li class='bottom_header'>Tags</li>
-			<li class='bottom_header'>Users</li>
+			<li class='bottom_header'><%= link_to 'Users', users_path, :class => 'bottom_link'%></li>
 			<li class='bottom_header'>Badges</li>
 			<li class='bottom_header'>Unanswered</li>
 			<li class='bottom_header'><a href="/questions/new">Ask a Question</a></li>
 		</ul>
 	</div>
-	<img id='logo' src="/assets/stackoverflow_logo.jpg">
+	<%= link_to image_tag("stackoverflow_logo.jpg", :id=>'logo'), controller: 'welcome' %>
 </header>
 
 

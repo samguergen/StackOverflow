@@ -1,21 +1,21 @@
 <body>
-	<div>
-		<% if session[:user_id] %>
-		<h3>All Questions</h3>
+	<div id='all_questions'>
+		<p id='ui_title'>All Questions</p>
 			<% @questions.each do |question| %>
 				<div class='ind_ques'>
-					<h3><%= question.title %></h3>
-					<p><%= question.content %></p>
-					<p><%= question.creator %></p>
+					<div class="ind_ques_contents">
+						<p ><%= question.title %></p>
+						<p><%= question.content %></p>
+						<p> <img class='ui_avatar_question' src='<%= question.creator.avatar %>'/> </p>
+						<p><%= question.creator.name %></p>
+					</div>
 				</div>
 			<% end %>
 
-		<% else %>
 			<% if false %>
 			<p><%= link_to 'sign up', signup_path %></p>
 			<p><%= link_to 'login', login_path %></p>
 			<% end %>
-		<% end %>
 	<div>
 </body>
 
