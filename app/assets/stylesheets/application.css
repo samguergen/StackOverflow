@@ -302,18 +302,26 @@ legend {
 	color: black !important;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
 	text-decoration: none !important;
+	border-top-style: solid;
+	border-top-color: orange;
+	border-top-width: 2px;
 }
 
-legend:visited {
-	color: black !important;
-	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif !important;
-	text-decoration: none !important;
-}
 
 span {
 	margin-left: 10em;
 	position: absolute;
 	color: black;
+
+}
+
+span:hover {
+	margin-left: 10em;
+	position: absolute;
+	color: black;
+	border-top-style: solid;
+	border-top-color: orange;
+	border-top-width: 2px;
 }
 
 .sign_link {

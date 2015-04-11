@@ -1,22 +1,22 @@
-
-<%= form_for User.new do |f| %>
-  <fieldset>
-    <legend><span> <%= link_to 'Log in', login_users_path, :class=> 'sign_link' %></span><%=link_to 'Sign up', new_user_path, :class=> 'sign_link'%></legend>
-    <%= f.text_field :name, :placeholder => "Name (your public display name" %>
-    
-    <%= f.text_field :email, :placeholder => "Email (required, but never shown)" %>
-    
-    <%= f.password_field :password, :placeholder => "Password" %>
-    
-    <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
-    
-    <%= f.text_field :age, :placeholder => "Age" %>
-    
-    <%= f.text_field :location, :placeholder => "Location" %>
-    
-    <%= f.url_field :avatar, :placeholder => "Avatar" %>
-    
-    <%= f.submit 'Sign Up'%>
-  </fieldset>
-<%end%>
-
+<div id='log_tag'>
+    <%= form_for User.new do |f| %>
+      <fieldset id="sign_field">
+        <legend><span> <%= link_to 'Log in', login_users_path, :class=> 'sign_link' %></span><%=link_to 'Sign up', new_user_path, :class=> 'sign_link'%></legend>
+        <%= f.text_field :name, :placeholder => "Name (your public display name" %>
+        
+        <%= f.text_field :email, :placeholder => "Email (required, but never shown)" %>
+        
+        <%= f.password_field :password, :placeholder => "Password" %>
+        
+        <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
+        
+        <%= f.text_field :age, :placeholder => "Age" %>
+        
+        <%= f.text_field :location, :placeholder => "Location" %>
+        
+        <%= f.url_field :avatar, :placeholder => "Avatar" %>
+        
+        <%= f.submit 'Sign Up'%>
+      </fieldset>
+    <%end%>
+</div>
