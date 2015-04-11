@@ -15,6 +15,11 @@
         <%= link_to answer.user.name, @question.creator %>
       </div>
     </div>
+
+  <% end %>
+
+  <% if session[:user_id] == @question.creator_id %>
+  <%= link_to "Delete my question", @question, method: :delete, data: {confirm: "Are you sure?"} %>
   <% end %>
 
   <%= form_for Answer.new do |f| %>
