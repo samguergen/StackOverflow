@@ -8,7 +8,7 @@ class AnswersController < ApplicationController
   end
 
   def edit
-    @answer = Article.find(params[:id])
+    @answer = Answer.find(params[:id])
   end
 
   def update
@@ -16,7 +16,7 @@ class AnswersController < ApplicationController
 
      @answer.update(answer_params)
      if @answer.save
-      redirect_to @answer
+      redirect_to @answer.question
      else
       redirect_to '/edit'
      end
