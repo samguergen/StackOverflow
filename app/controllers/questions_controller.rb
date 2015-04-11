@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question = Question.find(params[:id])
-    if session[:user_id] == @question.user_id
+    if session[:user_id] == @question.creator_id
       @question.destroy!
       redirect_to questions_path
     else
