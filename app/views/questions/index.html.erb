@@ -1,0 +1,21 @@
+<body>
+	<div>
+		<% if session[:user_id] %>
+		<h3>All Questions</h3>
+			<% @questions.each do |question| %>
+				<div class='ind_ques'>
+					<h3><%= question.title %></h3>
+					<p><%= question.content %></p>
+					<p><%= question.user %></p>
+				</div>
+			<% end %>
+
+		<% else %>
+			<% if false %>
+			<p><%= link_to 'sign up', signup_path %></p>
+			<p><%= link_to 'login', login_path %></p>
+			<% end %>
+		<% end %>
+	<div>
+</body>
+

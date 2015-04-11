@@ -11,14 +11,23 @@
 	<img id='exchange' src="/assets/stack_exchange.png">
 	<div id='banner'>
 		<ul id='top'>
-			<li class='top_header'>sign up</li>
-			<li class='top_header'>log in</li>
+			<% if false %>
+			<% if session[:user_id] %>
+				<% if false %>
+				<li><a id="home" href='/users/home/<%=session[:user_id]%>'>home | </a></li>
+				<% end %>
+				<li class='top_header'><%= link_to 'logout', logout_path %></a></li>
+			<% else %>
+			<% end %>
+				<li class='top_header'> <%= link_to 'sign up', signup_path %></li>
+				<li class='top_header'> <%= link_to 'login', login_path %></li>
+			<% end %>
 			<li class='top_header'>tour</li>
 			<li class='top_header'>help</li>
 			<li class='top_header'>stack overflow careers</li>
 			<form id="navbar-search" action="/search" method="GET">
-          <input id="search_bar" type="text" class="search-query span4" placeholder="Search" name="search">
-    </form>
+	            <input id="search_bar" type="text" class="search-query span4" placeholder="Search" name="search">
+		    </form>
 		</ul>
 	</div>
 
@@ -29,7 +38,7 @@
 			<li class='bottom_header'>Users</li>
 			<li class='bottom_header'>Badges</li>
 			<li class='bottom_header'>Unanswered</li>
-			<li class='bottom_header'>Unanswered</li>
+			<li class='bottom_header'>Ask Question</li>
 		</ul>
 	</div>
 	<img id='logo' src="/assets/stackoverflow_logo.jpg">
