@@ -9,11 +9,11 @@ Rails.application.routes.draw do
     collection do
       get 'login'
       post 'new_login'
+      get 'logout'
     end
   end
 
 
-  get '/logout' => 'sessions#destroy'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
