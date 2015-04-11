@@ -1,5 +1,9 @@
 class QuestionsController < ApplicationController
-
+  
+  def index
+    @questions = Question.all
+  end
+  
   def new
     @question = Question.new
   end
@@ -18,10 +22,6 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
-  def index
-    @questions = Question.all
-  end
-
   def destroy
     @question = Question.find(params[:id])
     if session[:user_id] == @question.creator_id
@@ -33,9 +33,8 @@ class QuestionsController < ApplicationController
     end
   end
 
-private
+  private
   def question_params
     params.require(:question).permit(:title, :content).merge(creator_id:session[:user_id])
   end
-
 end

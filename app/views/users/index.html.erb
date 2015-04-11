@@ -1,6 +1,15 @@
-<h2> Users </h1>
-<% @all_users.each do |u| %>
-<p> <%= u.name %>
-<br> <%= u.location %>
-<br> <img src='<%= u.avatar %>'/> </p>
-<% end %>
+<p id='ui_title'> Users </p>
+	<div id='user_index'>
+		Type to find users: <form id="navbar-search_user" action="/search" method="GET">
+	        <input id="search_bar_user" class="search-query span4" name="search">
+	    </form>
+		<ul >
+			<% @all_users.each do |u| %>
+				<li class="user_pro">
+					<p class="user_pro_name"> <%= u.name %>
+					<p class="user_pro_location"> <%= u.location %></p>
+					<p> <img class='ui_avatar' src='<%= u.avatar %>'/> </p>
+				</li>
+			<% end %>
+		</ul>
+	</div>

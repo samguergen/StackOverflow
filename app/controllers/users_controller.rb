@@ -21,26 +21,6 @@ class UsersController < ApplicationController
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #KEVIN STARTS WORKING FROM HERE DOWN
 
   def new
@@ -61,7 +41,6 @@ class UsersController < ApplicationController
 
 
   def show
-
       @user = User.find(params[:id])
   end
 
@@ -69,51 +48,16 @@ class UsersController < ApplicationController
 
   end
 
+  def destroy
+      session[:user_id] = nil
+      redirect_to '/login'
+  end
+
+
   private
   def user_params
     params.require(:user).permit(:name, :age, :location, :email, :password, :password_confirmation, :avatar)
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 end

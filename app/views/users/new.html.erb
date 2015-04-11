@@ -1,30 +1,22 @@
 
-<h2>Register</h2>
 <%= form_for User.new do |f| %>
   <fieldset>
-  <br>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
-  <%= f.label :password %>
-  <%= f.text_field :password %>
-  <br>
-  <%= f.label :password_confirmation %>
-  <%= f.text_field :password_confirmation %>
-  <br>
-  <%= f.label :age %>
-  <%= f.text_field :age %>
-  <br>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <br>
-  <%= f.label :avatar %>
-  <%= f.url_field :avatar %>
-  <br>
-  <%= f.submit 'Register'%>
-</fieldset>
+    <legend>Sign Up</legend>
+    <%= f.text_field :name, :placeholder => "Name (your public display name" %>
+    
+    <%= f.text_field :email, :placeholder => "Email (required, but never shown)" %>
+    
+    <%= f.password_field :password, :placeholder => "Password" %>
+    
+    <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
+    
+    <%= f.text_field :age, :placeholder => "Age" %>
+    
+    <%= f.text_field :location, :placeholder => "Location" %>
+    
+    <%= f.url_field :avatar, :placeholder => "Avatar" %>
+    
+    <%= f.submit 'Sign Up'%>
+  </fieldset>
 <%end%>
 
