@@ -7,7 +7,11 @@ class QuestionsController < ApplicationController
   def create
     @new_question = Question.new(question_params)
     if @new_question.save!
-
+      redirect_to question_path(@new_question)
+    else
+      flash[:notice] = "A problem has occurred. Your question couldn't be posted."
+      redirect_to questions_path
+    end
   end
 
   def show
@@ -27,6 +31,11 @@ class QuestionsController < ApplicationController
       flash[:notice] = "You can only delete your own questions!"
       redirect_to questions_path
     end
+  end
+
+private
+  def question_params
+    params.require(:question).permit(:title, :content).merge(creator_id:session[:user_id])
   end
 
 end
