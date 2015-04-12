@@ -1,0 +1,22 @@
+
+<div id="voting">
+
+	<p><div id="like">
+	<%= link_to answer_votes_path(@answer, like: "yes"), method: :post do %>
+		<div class="arrow-up"></div>
+	<% end %>
+	</div></p>
+	<div id='votes_total'>
+		<%= Vote.total(@answer.id, "Answer") %>
+	</div>
+
+	<% answer_id = @answer.id%>
+
+	<p><div id="dislike">
+
+	<%= link_to answer_votes_path(@answer, like: "no"), method: :post do %>
+		<div class="arrow-down"></div>
+	<% end %>
+	</div></p>
+
+</div>

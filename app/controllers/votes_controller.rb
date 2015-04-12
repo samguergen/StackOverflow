@@ -11,21 +11,32 @@ class VotesController < ApplicationController
     p "Over Here!!!"
     p "#{params[:test]}"
     @question = params[:question_id]
+    @answer = params[:answer_id]
 
-    if params[:like] == "yes"
-    @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question" , point: 1)
-
-    elsif params[:like] == "no"
-    @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question", point: -1)
-    # @question = @vote.question
-  #   if @vote.save!
-  #     redirect_to question_path(@question)
-  #   else
-  #     flash[:notice] = "You can't vote!"
-  #     redirect_to question_path(@question)
-  #   end
+    if @question    
+      if params[:like] == "yes"
+        @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question", point: 1)
+      elsif params[:like] == "no"
+        @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question", point: -1)
+      end
+      redirect_to question_path(@question)
+    elsif @answer
+      if params[:like] == "yes"
+        @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:answer_id], votable_type: "Answer", point: 1)
+      elsif params[:like] == "no"
+        @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:answer_id], votable_type: "Answer", point: -1)
+      end
+      redirect_to question_path(@question)
     end
-    redirect_to question_path(@question)
   end
+
+  #   if params[:like] == "yes"
+  #   @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question" , point: 1)
+
+  #   elsif params[:like] == "no"
+  #   @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question", point: -1)
+  #   end
+  #   redirect_to question_path(@question)
+  # end
 
 end
