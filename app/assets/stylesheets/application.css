@@ -123,6 +123,7 @@ ul li {
 
 .ind_ques_contents {
 	margin-left: 6em;
+	list-style-type: none;
 }
 
 .ui_avatar_question {
@@ -134,13 +135,13 @@ ul li {
 }
 
 div div p {
-	color: #0c65a5;
+	color: #0c65a5 !important;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 div div p:nth-child(2) {
-	font-size: .7em;
-	color: #444;
+	font-size: .8em;
+	color: #444 !important;
 }
 
 div div p:nth-child(4) {
@@ -148,10 +149,14 @@ div div p:nth-child(4) {
 	position: absolute;
 	margin-left: 4.5em;
 	margin-top: -5.5em;
-	mar
 }
 
-/* question show********************************* */
+.qi_link {
+	text-decoration: none !important;
+	color: #0c65a5 !important;
+}
+
+/* question show ********************************* */
 
 .avy {
 	width: 2em;
