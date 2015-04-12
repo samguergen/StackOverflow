@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
     def index
       @comments = Comments.all
-    
+
     end
 
   def new
@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     @new_comment = Comment.new(comment_params)
     if @new_comment.save!
       flash[:notice] = "Thank You for Commenting!"
-      redirect_to question_path(@question)
+      redirect_to question_path()
     else
       flash[:notice] = "A problem has occurred. Your comment couldn't be posted."
       redirect_to questions_path
