@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       redirect_to questions_path
     else
       flash.now[:danger] = "Invalid email/password combination"
-      redirect_to login_path
+      redirect_to login_users_path
     end
   end
 

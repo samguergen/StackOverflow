@@ -3,6 +3,16 @@
 <div class='user_section'>
   <%= @question.content %>
 
+<% if @question.comments.any? %>
+    <% @question.comments.each do |c| %>
+      <li><%=c.content %></li>
+      <br>
+<% end %>
+
+    <% end %>
+  <%= link_to "comment", new_comment_path(:parent => @question.class, :id => @question.id) %>
+  <BR>
+
   <div id='qu_box' >
     <%= image_tag @question.creator.avatar, class: 'avy' %>
     <%= link_to @question.creator.name, @question.creator, :id => 'qu_name' %>
