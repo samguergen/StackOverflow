@@ -16,6 +16,7 @@
   <% @question.answers.each do |answer| %>
     <div class='ind_question'>
       <%= answer.content %>
+      <%= render partial: "votes/votes_answers", locals: { answer_id: answer.id } %>
       <div class='user'>
         <%= image_tag answer.user.avatar, class: 'avy' %>
         <%= link_to answer.user.name, @question.creator, :id => 'qu_name' %>

@@ -26,7 +26,8 @@ class VotesController < ApplicationController
       elsif params[:like] == "no"
         @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:answer_id], votable_type: "Answer", point: -1)
       end
-      redirect_to question_path(@question)
+      the_answer = Answer.find(@answer)
+      redirect_to question_path(the_answer.question)
     end
   end
 

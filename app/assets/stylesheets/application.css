@@ -217,6 +217,12 @@ div div p:nth-child(4) {
 	margin-left: 1em;
 }
 
+#voting_answer {
+	margin-left: -4.4em;
+	position: absolute;
+	margin-top: -2em;
+}
+
 #dislike {
 	margin-top: .9em;
 }
