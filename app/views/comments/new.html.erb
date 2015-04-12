@@ -4,6 +4,6 @@
 <% if session[:user_id] != nil %>
 	<%= f.hidden_field :user_id, value: session[:user_id] %>
 <%end%>
-  <%= f.text_field :body, class: 'form-control'%><BR>
+  <%= f.text_field :content, class: 'form-control'%><BR>
   <%= f.submit "Submit" %>
 <% end %>

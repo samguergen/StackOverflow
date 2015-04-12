@@ -6,9 +6,9 @@
 <% if @question.comments.any? %>
   <ul>
     <% @question.comments.each do |c| %>
-      <li><%= link_to c.content %></li>
-<% end %>
+      <li><%=c.content %></li>
   </ul>
+<% end %>
 
     <% end %>
   <%= link_to "comment", new_comment_path(:parent => @question.class, :id => @question.id) %>
