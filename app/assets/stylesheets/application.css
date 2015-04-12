@@ -171,7 +171,6 @@ div div p:nth-child(4) {
 
 .user_section {
 	padding: 12px 0 10px 0;
-	border-bottom: 1px solid #e0e0e0;
 	border-top: 1px solid #e0e0e0;
 	margin-left: 1.2em;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -185,14 +184,13 @@ div div p:nth-child(4) {
 }
 
 #qu_box {
-	margin-left: 33em;
+	margin-left: 38em;
 }
 
 .ind_question {
 	padding: 12px 0 10px 0;
-	border-bottom: 1px solid #e0e0e0;
 	border-top: 1px solid #e0e0e0;
-	margin-left: 1.2em;
+	margin-left: 5.4em;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-size: .9em;
 }
@@ -206,6 +204,48 @@ div div p:nth-child(4) {
 	margin-left: 1em;
 }
 
+#qs_content{
+	margin-left: 5em;
+}
+
+/* Votes ********************************************************* */
+
+#voting {
+	margin-top: -4em;
+	margin-left: 1em;
+}
+
+#dislike {
+	margin-top: .9em;
+}
+
+#votes_total {
+	color: #858D93;
+	margin-left: .6em;
+}
+
+#answer_amount {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color: #444;
+	margin-left: 5em;
+	margin-bottom: .6em;
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #858D93;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid #858D93;
+}
 
 /* User Index/log/signin****************************** */
 
