@@ -6,7 +6,7 @@
 <% if @question.comments.any? %>
   <ul>
     <% @question.comments.each do |c| %>
-      <li><%= link_to c.body %></li>
+      <li><%= link_to c.content %></li>
 <% end %>
   </ul>
 
