@@ -364,3 +364,9 @@ span:hover {
 	position: absolute;
 	margin-top: .3em;
 }
+
+li .new_comment{
+	color: #888;
+	opacity: .6;
+	padding: 0 3px 2px 3px;
+}
