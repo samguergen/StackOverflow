@@ -1,0 +1,15 @@
+
+
+<div id="voting">
+
+Votes:
+<%= Vote.total(@question.id, "Question") %>
+
+<p><div id="like">
+<%= button_to "Like", question_votes_path(@question, like: "yes"), method: :post %>
+</div></p>
+<p><div id="dislike">
+<%= button_to "Disike", question_votes_path(@question, like: "no"), method: :post %>
+</div></p>
+</div>
+

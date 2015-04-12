@@ -7,7 +7,7 @@
     <%= link_to @question.creator.name, @question.creator %>
   </div>
 
-  <%= render _votes, layout: false %>
+  <%= render "votes/vote" %>
 
   <% @question.answers.each do |answer| %>
     <div class='answer'>
