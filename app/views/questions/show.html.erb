@@ -4,10 +4,9 @@
   <%= @question.content %>
 
 <% if @question.comments.any? %>
-  <ul>
     <% @question.comments.each do |c| %>
       <li><%=c.content %></li>
-  </ul>
+      <br>
 <% end %>
 
     <% end %>
