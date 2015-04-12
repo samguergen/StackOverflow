@@ -1,10 +1,8 @@
 class CommentsController < ApplicationController
-  #INDENTED FOR HOA'S LOVE
 
-    def index
-      @comments = Comments.all
-
-    end
+  def index
+    @comments = Comments.all
+  end
 
   def new
     @comment = Comment.new
@@ -23,6 +21,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:content).merge(creator_id:session[:user_id])
+    params.require(:comment).permit(:content, :user_id)
   end
 end
