@@ -2,6 +2,12 @@
 
 <div class='user_section'>
   <%= @question.content %>
+  <% @question.comments.each do |comment| %>
+    <%= comment.content %>
+  <% end %>
+  <!-- Pass parameter of the question id as the commentable_id
+       and the class of question as commentable_type -->
+  <%= link_to 'Comment', new_comment_path(commentable_id: @question.id, commentable_type: @question.class) %>
 
   <div id='qu_box' >
     <%= image_tag @question.creator.avatar, class: 'avy' %>
@@ -24,6 +30,11 @@
       <%= link_to "Edit my answer",edit_answer_path %>
       <% end %>
 
+   <% answer.comments.each do |comment| %>
+      <%= comment.content %>
+   <% end %>
+
+   <%= link_to 'Comment', new_comment_path(commentable_id: answer.id, commentable_type: answer.class) %>
   <% end %>
 
   <% if session[:user_id] == @question.creator_id %>

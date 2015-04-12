@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  resources :comments
+
   resources :answers do
     resources :votes
 
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
     resources :votes
 
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :users do
