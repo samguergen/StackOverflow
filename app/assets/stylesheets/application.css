@@ -109,7 +109,7 @@ ul li {
 	width: 17em;
 }
 
-/*Questions Index*/
+/*Questions Index************************************** */
   
 #all_questions {
 	margin-top: 3em;
@@ -151,7 +151,7 @@ div div p:nth-child(4) {
 	mar
 }
 
-/* question show */
+/* question show********************************* */
 
 .avy {
 	width: 2em;
@@ -202,7 +202,7 @@ div div p:nth-child(4) {
 }
 
 
-/* User Index/log/signin */
+/* User Index/log/signin****************************** */
 
 #ui_title {
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -230,11 +230,12 @@ div div p:nth-child(4) {
 }
 
 .user_pro_name {
-	color: #0c65a5;
+	color: #0c65a5 !important;
 	font-size: .8em;
 	margin-left: 4.5em;
 	margin-top: 1.2em;
 	position: absolute;
+	text-decoration: none !important;
 }
 
 .user_pro_location {
@@ -331,7 +332,7 @@ span:hover {
 }
 
 
-/* user show */
+/* user show****************************************** */
 .user_show {
 	padding: 12px 0 10px 0;
 	border-top: 1px solid #e0e0e0;
