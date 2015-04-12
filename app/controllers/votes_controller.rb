@@ -6,6 +6,12 @@ class VotesController < ApplicationController
     @vote = Vote.new
   end
 
+  def downvote
+    @question = params[:question_id]
+    @vote = Vote.create!(user_id: session[:user_id], votable_id: params[:question_id], votable_type: "Question", point: -1)
+    redirect_to question_path(@question)
+  end
+
   def create
     p "Over Here!!!"
     p "#{params[:test]}"
