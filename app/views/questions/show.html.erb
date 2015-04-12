@@ -1,7 +1,7 @@
 <p id='qs_title'><%= @question.title %></h1>
 
 <div class='user_section'>
-  <%= @question.content %>
+  <p id='qs_content'><%= @question.content %></p>
 
 <% if @question.comments.any? %>
     <% @question.comments.each do |c| %>
@@ -17,12 +17,16 @@
     <%= image_tag @question.creator.avatar, class: 'avy' %>
     <%= link_to @question.creator.name, @question.creator, :id => 'qu_name' %>
   </div>
+    
+    <%= render "votes/vote" %>
 
-  <%= render "votes/vote" %>
-
+  <div id='answer_amount'>
+      <%=@question.answers.count %> Answers
+  </div>
   <% @question.answers.each do |answer| %>
     <div class='ind_question'>
       <%= answer.content %>
+      <%= render partial: "votes/votes_answers", locals: { answer_id: answer.id } %>
       <div class='user'>
         <%= image_tag answer.user.avatar, class: 'avy' %>
         <%= link_to answer.user.name, @question.creator, :id => 'qu_name' %>
