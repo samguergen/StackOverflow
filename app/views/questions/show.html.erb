@@ -3,11 +3,13 @@
 <div class='user_section'>
   <%= @question.content %>
 
-  <div id='qu_box' >  
+  <div id='qu_box' >
     <%= image_tag @question.creator.avatar, class: 'avy' %>
     <%= link_to @question.creator.name, @question.creator, :id => 'qu_name' %>
   </div>
-</div>
+
+  <%= render "votes/vote" %>
+
   <% @question.answers.each do |answer| %>
     <div class='ind_question'>
       <%= answer.content %>

@@ -1,9 +1,9 @@
 class QuestionsController < ApplicationController
-  
+
   def index
     @questions = Question.all
   end
-  
+
   def new
     @question = Question.new
   end
@@ -20,6 +20,8 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @question_vote = @question.votes
+
   end
 
   def destroy
