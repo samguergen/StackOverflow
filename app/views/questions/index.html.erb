@@ -4,17 +4,17 @@
 			<% @questions.each do |question| %>
 				<div class='ind_ques'>
 					<div class="ind_ques_contents">
-						<p ><%= question.title %></p>
-						<p><%= question.content %></p>
-						<p> <img class='ui_avatar_question' src='<%= question.creator.avatar %>'/> </p>
-						<p><%= question.creator.name %></p>
+						<li><%= link_to "#{question.title}", question_path(question.id) %></li>
+						<li><%= question.content %></li>
+						<li> <img class='ui_avatar_question' src='<%= question.creator.avatar %>'/> </li>
+						<li><%= link_to "#{question.creator.name}", user_path(question.creator_id) %></li>
 					</div>
 				</div>
 			<% end %>
 
 			<% if false %>
-			<p><%= link_to 'sign up', signup_path %></p>
-			<p><%= link_to 'login', login_path %></p>
+			<li><%= link_to 'sign up', signup_path %></li>
+			<li><%= link_to 'login', login_path %></li>
 			<% end %>
 	<div>
 </body>

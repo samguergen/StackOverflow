@@ -10,7 +10,7 @@ class AnswersController < ApplicationController
     answer.user_id = session[:user_id]
     answer.save
 
-    redirect_to @answer.question
+    redirect_to answer.question
   end
 
   def edit
