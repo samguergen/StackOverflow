@@ -14,7 +14,7 @@ Votes:
 
 
 <p><div id="dislike">
-<%= link_to "Dislike", question_question_down_path(question_id: question_id, like: "no"), method: :post %>
+<%= link_to "Dislike", question_votes_path(@question, like: "no"), method: :post %>
 </div></p>
 
 </div>
