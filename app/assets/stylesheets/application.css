@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+
 #banner {
 	display: block;
 	background-color: rgba(34, 34, 34, 1);
@@ -108,6 +111,29 @@ ul li {
 
 #search_bar {
 	width: 17em;
+}
+
+footer {
+	position: fixed;
+	bottom:0;
+	width:101.5%;
+	height:60px;   /* Height of the footer */
+	background: #2f2f2f;
+	margin-left: -1em;
+	margin-bottom: -1em;
+}
+
+#foot {
+	display: inline-block;
+	margin-left: 30em;
+	font-size: .7em;
+	color: #a2dcf4;
+	margin-top: 1.5em;
+	bottom: 0;
+}
+
+.foot_link {
+	margin-right: 1em;
 }
 
 /*Questions Index************************************** */
