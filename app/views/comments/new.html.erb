@@ -1,9 +1,11 @@
-<%= form_for :comments, url: {action: "create"}, html: {class: "user_form"} do |f| %>
-<%= f.hidden_field :commentable_type, value: params[:parent] %>
-<%= f.hidden_field :commentable_id, value: params[:id] %>
-<% if session[:user_id] != nil %>
-	<%= f.hidden_field :user_id, value: session[:user_id] %>
-<%end%>
-  <%= f.text_field :content, class: 'form-control'%><BR>
-  <%= f.submit "Submit" %>
-<% end %>
+<div = 'new_comment'>
+	<%= form_for :comments, url: {action: "create"}, html: {class: "user_form"} do |f| %>
+	<%= f.hidden_field :commentable_type, value: params[:parent] %>
+	<%= f.hidden_field :commentable_id, value: params[:id] %>
+	<% if session[:user_id] != nil %>
+		<%= f.hidden_field :user_id, value: session[:user_id] %>
+	<%end%>
+	  <%= f.text_field :content, class: 'form-control'%><BR>
+	  <%= f.submit "Submit" %>
+	<% end %>
+</div>
