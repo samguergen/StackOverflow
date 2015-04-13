@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
      self.name = email.slice(/^(.*?)@/).chop
   end
 
+  def self.search(query)
+    where("name like ?", "%#{query}%") 
+  end
 end

@@ -1,13 +1,19 @@
 <p id='qs_title'><%= @question.title %></h1>
 
+
 <div class='user_section'>
-  <%= @question.content %>
-  <% @question.comments.each do |comment| %>
-    <%= comment.content %>
-  <% end %>
+  <p id='qs_content'><%= @question.content %></p>
+
+  <div id='comments'>
+    <% if @question.comments.any? %>
+      <% @question.comments.each do |comment| %>
+        <li id='com'><%=comment.content %></li>
+      <% end %>
+    <% end %>
   <!-- Pass parameter of the question id as the commentable_id
        and the class of question as commentable_type -->
-  <%= link_to 'Comment', new_comment_path(commentable_id: @question.id, commentable_type: @question.class) %>
+  <%= link_to 'Add a Comment', new_comment_path(commentable_id: @question.id, commentable_type: @question.class), class: 'add_com'  %>
+  </div>
 
   <div id='qu_box' >
     <%= image_tag @question.creator.avatar, class: 'avy' %>
@@ -30,8 +36,8 @@
     </div>
 
    <% if session[:user_id] == answer.user_id %>
-      <%= link_to "Delete my answer", answer, method: :delete, data: {confirm: "Are you sure?"} %>
-      <%= link_to "Edit my answer",edit_answer_path %>
+      <%= link_to "Delete my answer", answer, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %>
+      <%= link_to "Edit my answer",edit_answer_path(answer), id: 'edit' %>
       <% end %>
 
    <% answer.comments.each do |comment| %>
