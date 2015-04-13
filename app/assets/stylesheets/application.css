@@ -70,6 +70,7 @@
 ul li {
 	display: inline;
 	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-decoration: none !important;
 }
 
 
@@ -247,6 +248,10 @@ div div p:nth-child(4) {
 	font-size: .5em;
 	color: #888;
 	text-decoration: none !important;	
+}
+
+#sub {
+	margin-top: 2em;
 }
 
 /* Votes ********************************************************* */
@@ -447,9 +452,7 @@ span:hover {
 }
 
 .user_info {
-	margin-left: 3em;
 	display: inherit;
-	margin-left: 10em;
 }
 
 .us_title {
@@ -465,3 +468,29 @@ li .new_comment{
 	opacity: .6;
 	padding: 0 3px 2px 3px;
 }
+
+.us_answers {
+	text-decoration: none !important;
+	color: #444 !important;
+}
+
+.us_questions {
+	text-decoration: none !important;
+	color: #444 !important;
+}
+
+#edit_prof {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color: #666 !important;
+	text-decoration: none !important;
+	font-size: .8em;
+	margin-left: .5em;
+}
+
+#delete_prof {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	color: #666 !important;
+	text-decoration: none !important;
+	font-size: .8em;
+}
+
