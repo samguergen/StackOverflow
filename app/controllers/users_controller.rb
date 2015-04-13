@@ -2,7 +2,13 @@ class UsersController < ApplicationController
 # SAM WORKS FROM THIS LINE TO LINE 49
 
   def index
-    @all_users = User.all
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+      @users = User.order("created_at DESC")
+    end
+    
+      @all_users = User.all
   end
 
   def new_login
