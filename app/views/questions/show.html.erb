@@ -3,15 +3,14 @@
 <div class='user_section'>
   <p id='qs_content'><%= @question.content %></p>
 
-<% if @question.comments.any? %>
-    <% @question.comments.each do |c| %>
-      <li><%=c.content %></li>
-      <br>
-<% end %>
-
+<div id='comments'>
+  <% if @question.comments.any? %>
+      <% @question.comments.each do |c| %>
+        <li id='com'><%=c.content %></li>
     <% end %>
-  <%= link_to "add a comment", new_comment_path(:parent => @question.class, :id => @question.id) %>
-  <BR>
+  <% end %>
+  <%= link_to "add a comment", new_comment_path(:parent => @question.class, :id => @question.id), class: 'add_com' %>
+</div>
 
   <div id='qu_box' >
     <%= image_tag @question.creator.avatar, class: 'avy' %>
@@ -34,8 +33,8 @@
     </div>
 
    <% if session[:user_id] == answer.user_id %>
-      <%= link_to "Delete my answer", answer, method: :delete, data: {confirm: "Are you sure?"} %>
-      <%= link_to "Edit my answer",edit_answer_path %>
+      <%= link_to "Delete my answer", answer, method: :delete, data: {confirm: "Are you sure?"}, id: 'delete' %>
+      <%= link_to "Edit my answer",edit_answer_path, id: 'edit' %>
       <% end %>
 
   <% end %>
