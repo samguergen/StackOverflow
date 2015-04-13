@@ -4,10 +4,10 @@
 			<% @questions.each do |question| %>
 				<div class='ind_ques'>
 					<div class="ind_ques_contents">
-						<li><%= link_to "#{question.title}", question_path(question.id) %></li>
-						<li><%= question.content %></li>
-						<li> <img class='ui_avatar_question' src='<%= question.creator.avatar %>'/> </li>
-						<li><%= link_to "#{question.creator.name}", user_path(question.creator_id) %></li>
+						<p><%= link_to "#{question.title}", question_path(question.id), :class => 'qi_link' %></p>
+						<p><%= question.content %></p>
+						<p> <img class='ui_avatar_question' src='<%= question.creator.avatar %>'/> </p>
+						<p><%= link_to "#{question.creator.name}", user_path(question.creator_id), :class => 'qi_link' %></p>
 					</div>
 				</div>
 			<% end %>
