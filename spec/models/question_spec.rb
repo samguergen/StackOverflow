@@ -6,7 +6,7 @@ describe Question do
     question.title   = "new Question!"
     question.content = "A great story"
 
-    post.save
-    expect(post.title).to eq("new Question!")
+    question.save
+    expect(question.title).to eq("New Question!")
   end
 end
